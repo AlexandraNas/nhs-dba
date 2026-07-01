@@ -5,6 +5,6 @@ USE NHS_Trust_DB;
 CREATE TABLE Medications (
     MedicationID BIGINT NOT NULL AUTO_INCREMENT,
     MedicationName VARCHAR(150) NOT NULL,
-    Descritption TEXT,
+    Description TEXT,
     PRIMARY KEY (MedicationID)
 );
