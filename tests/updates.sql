@@ -1,24 +1,3 @@
-
--- A. CREATE
-CREATE TABLE Specialities (
-    SpecialityID BIGINT NOT NULL AUTO_INCREMENT,
-    SpecialityName VARCHAR(100) NOT NULL,
-    ClinicID BIGINT NOT NULL,
-    PRIMARY KEY (SpecialityID),
-    CONSTRAINT FK_Speciality_Clinic FOREIGN KEY (ClinicID) REFERENCES Clinics(ClinicID)
-);
- 
--- B. ALTER
-ALTER TABLE Specialities 
-ADD COLUMN Description TEXT;
- 
--- C. TRUNCATE
-TRUNCATE TABLE Specialities;
- 
--- D. DROP
-DROP TABLE Specialities;
- 
-
 -- Insert the first patient record
 INSERT INTO Patients (PatientName, PatientSurname, PhoneNumber, Email, NHSnumber, Address, DateBirth, ActiveOrNot)
 VALUES ('John', 'Doe', 447123456789, 'john.doe@email.com', 1234567890, '123 High Street, London', '1990-05-15', TRUE);
