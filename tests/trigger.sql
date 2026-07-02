@@ -1,0 +1,10 @@
+DELIMITER //
+
+CREATE TRIGGER trg_Before_Doctor_Insert
+BEFORE INSERT ON Doctors
+FOR EACH ROW
+BEGIN
+    SET NEW.Speciality = UPPER(NEW.Speciality);
+END //
+
+DELIMITER ;
